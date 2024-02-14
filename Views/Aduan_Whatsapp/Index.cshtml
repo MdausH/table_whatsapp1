@@ -1,0 +1,96 @@
+﻿@model IEnumerable<table_whatsapp1.Models.Aduan_Whatsapp>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Meja Bantuan Whatsapp</h2>
+
+<p>
+    @Html.ActionLink("Tambah Aduan", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">DataTable with default features</h3>
+    </div>
+    <!-- /.card-header -->
+    <div class="card-body">
+        <table id="example1" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th class="table-light">
+                        @Html.DisplayNameFor(model => model.No)
+                    </th>
+                    <th class="table-light">
+                        @Html.DisplayNameFor(model => model.Pengadu)
+                    </th>
+                    <th class="table-light">
+                        @Html.DisplayNameFor(model => model.Tarikh)
+                    </th>
+                    <th class="table-light">
+                        @Html.DisplayNameFor(model => model.Jenis_Pertanyaan)
+                    </th>
+                    <th class="table-light">
+                        @Html.DisplayNameFor(model => model.Aduan)
+                    </th>
+                    <th class="table-light">
+                        @Html.DisplayNameFor(model => model.Tindakan)
+                    </th>
+                    <!--<th class="table-light"--><!--Html.DisplayNameFor(model => model.Nama)-->
+                    </th>
+                    <th class="table-light">
+                        @Html.DisplayNameFor(model => model.Status)
+                    </th>
+                    <th class="table-light">
+                        @Html.DisplayNameFor(model => model.Tarikh_aduan)
+                    </th>
+                    <th class="table-light">
+                        @Html.DisplayNameFor(model => model.Tarikh_selesai)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.No)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Pengadu)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tarikh)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Jenis_Pertanyaan)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Aduan)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tindakan)
+                        </td>
+                        <!--<td>Html.DisplayFor(modelItem => item.Nama)
+                        </td>-->
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Status)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tarikh_aduan)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Tarikh_selesai)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Kemaskini", "Edit", new { id = item.Id }, new { @class = "btn btn-warning" })
+                            <!-- Html.ActionLink("Details", "Details", new { id = item.Id }, new { class = "btn btn-success" }) -->
+                            <!-- Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { class = "btn btn-danger" }) -->
+                        </td>
+                    </tr>
+                }
+
+        </table>
+

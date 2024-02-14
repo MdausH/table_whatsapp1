@@ -1,0 +1,115 @@
+﻿@model table_whatsapp1.Models.Aduan_Whatsapp
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Meja Bantuan Whatsapp</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pengadu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pengadu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarikh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tarikh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Jenis_Aduan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Jenis_Aduan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bahagian)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bahagian)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Jenis_Pertanyaan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Jenis_Pertanyaan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aduan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aduan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tindakan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tindakan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nama)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nama)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarikh_aduan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tarikh_aduan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Tarikh_selesai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Tarikh_selesai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }, new { @class = "btn btn-primary" }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

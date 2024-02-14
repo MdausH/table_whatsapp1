@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="meja_bantuanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Aduan_Whatsapp">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="No" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Pengadu" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tarikh" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Jenis_Aduan" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Bahagian" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Jenis_Pertanyaan" Type="nvarchar" MaxLength="50" />
+          <Property Name="Aduan" Type="nvarchar" MaxLength="250" Nullable="false" />
+          <Property Name="Tindakan" Type="nvarchar" MaxLength="350" Nullable="false" />
+          <Property Name="Nama" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Tarikh_aduan" Type="datetime2" Precision="7" Nullable="false" />
+          <Property Name="Tarikh_selesai" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="meja_bantuanModelStoreContainer">
+          <EntitySet Name="Aduan_Whatsapp" EntityType="Self.Aduan_Whatsapp" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="meja_bantuanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Aduan_Whatsapp">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="No" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Pengadu" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tarikh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Jenis_Aduan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Bahagian" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Jenis_Pertanyaan" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Aduan" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tindakan" Type="String" MaxLength="350" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Nama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Tarikh_aduan" Type="DateTime" Nullable="false" Precision="7" />
+          <Property Name="Tarikh_selesai" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="meja_bantuanEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Aduan_Whatsapp" EntityType="Self.Aduan_Whatsapp" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="meja_bantuanModelStoreContainer" CdmEntityContainer="meja_bantuanEntities">
+          <EntitySetMapping Name="Aduan_Whatsapp">
+            <EntityTypeMapping TypeName="meja_bantuanModel.Aduan_Whatsapp">
+              <MappingFragment StoreEntitySet="Aduan_Whatsapp">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="No" ColumnName="No" />
+                <ScalarProperty Name="Pengadu" ColumnName="Pengadu" />
+                <ScalarProperty Name="Tarikh" ColumnName="Tarikh" />
+                <ScalarProperty Name="Jenis_Aduan" ColumnName="Jenis_Aduan" />
+                <ScalarProperty Name="Bahagian" ColumnName="Bahagian" />
+                <ScalarProperty Name="Jenis_Pertanyaan" ColumnName="Jenis_Pertanyaan" />
+                <ScalarProperty Name="Aduan" ColumnName="Aduan" />
+                <ScalarProperty Name="Tindakan" ColumnName="Tindakan" />
+                <ScalarProperty Name="Nama" ColumnName="Nama" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Tarikh_aduan" ColumnName="Tarikh_aduan" />
+                <ScalarProperty Name="Tarikh_selesai" ColumnName="Tarikh_selesai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
